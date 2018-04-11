@@ -35,15 +35,13 @@ import javax.ws.rs.FormParam;
 public class HelloBean {
 
     @MvcBinding
-    @NotNull
-    @Size(min = 1, max = 16)
     private String firstName;
 
     @MvcBinding
-    @NotNull
-    @Size(min = 1, max = 24)
     private String lastName;
 
+    @NotNull
+    @Size(min = 1, max = 16)
     public String getFirstName() {
         return firstName;
     }
@@ -53,6 +51,8 @@ public class HelloBean {
         this.firstName = firstName;
     }
 
+    @NotNull
+    @Size(min = 1, max = 24)
     public String getLastName() {
         return lastName;
     }
