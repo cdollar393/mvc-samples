@@ -15,7 +15,7 @@
         <module>post-redirect-get</module>
         <module>generator</module>
         <module>simple</module>
-    </modules>    
+    </modules>
 
     <properties>
         <netbeans.hint.license>mit</netbeans.hint.license>
@@ -23,8 +23,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <version.docker-maven-plugin>0.23.0</version.docker-maven-plugin>
-        <version.mvc.api>1.0-pr</version.mvc.api>
-        <version.ozark>1.0.0-m03</version.ozark>
+        <version.mvc.api>1.0-SNAPSHOT</version.mvc.api>
+        <version.ozark>1.0.0-m04-SNAPSHOT</version.ozark>
     </properties>
 
     <dependencyManagement>
@@ -34,7 +34,7 @@
                 <artifactId>javaee-web-api</artifactId>
                 <version>7.0</version>
                 <scope>provided</scope>
-            </dependency>    
+            </dependency>
             <dependency>
                 <groupId>javax.mvc</groupId>
                 <artifactId>javax.mvc-api</artifactId>
@@ -44,17 +44,17 @@
                 <groupId>org.mvc-spec.ozark</groupId>
                 <artifactId>ozark-core</artifactId>
                 <version>${version.ozark}</version>
-            </dependency>  
+            </dependency>
             <dependency>
                 <groupId>org.mvc-spec.ozark</groupId>
                 <artifactId>ozark-jersey</artifactId>
                 <version>${version.ozark}</version>
-            </dependency>  
+            </dependency>
             <dependency>
                 <groupId>org.mvc-spec.ozark</groupId>
                 <artifactId>ozark-resteasy</artifactId>
                 <version>${version.ozark}</version>
-            </dependency>  
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -64,16 +64,16 @@
             <artifactId>javaee-web-api</artifactId>
             <scope>provided</scope>
         </dependency>
-      
+
         <dependency>
             <groupId>javax.mvc</groupId>
             <artifactId>javax.mvc-api</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>org.mvc-spec.ozark</groupId>
             <artifactId>ozark-core</artifactId>
-        </dependency>  
+        </dependency>
     </dependencies>
 
     <repositories>

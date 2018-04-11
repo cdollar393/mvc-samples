@@ -23,42 +23,32 @@
  */
 package eu.agilejava.mvc;
 
-import javax.mvc.binding.MvcBinding;
-import javax.ws.rs.FormParam;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
-/**
- *
- * @author Ivar Grimstad (ivar.grimstad@gmail.com)
- */
-public class HelloBean extends HelloCore {
+public class HelloCore {
 
-    @Override
-    @MvcBinding
+    private String firstName;
+    private String lastName;
+
+    @NotNull
+    @Size(min = 1, max = 16)
     public String getFirstName() {
-        return super.getFirstName();
+        return firstName;
     }
 
-    // Note that using @FormParam here on the setter may not be portable, but it
-    // does work with RESTeasy on Wildfly. Here's what the javadoc for @FormParam
-    // says: "Note that, whilst the annotation target permits use on fields and
-    // methods, this annotation is only required to be supported on resource method
-    // parameters."
-    @Override
-    @FormParam("firstName")
     public void setFirstName(String firstName) {
-        super.setFirstName(firstName);
+        this.firstName = firstName;
     }
 
-    @Override
-    @MvcBinding
+    @NotNull
+    @Size(min = 1, max = 24)
     public String getLastName() {
-        return super.getLastName();
+        return lastName;
     }
 
-    @Override
-    @FormParam("lastName")
     public void setLastName(String lastName) {
-        super.setLastName(lastName);
+        this.lastName = lastName;
     }
 
 }
