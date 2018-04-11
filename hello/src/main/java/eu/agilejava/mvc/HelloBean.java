@@ -37,19 +37,18 @@ public class HelloBean {
     @MvcBinding
     @NotNull
     @Size(min = 1, max = 16)
-    @FormParam("firstName")
     private String firstName;
 
     @MvcBinding
     @NotNull
     @Size(min = 1, max = 24)
-    @FormParam("lastName")
     private String lastName;
 
     public String getFirstName() {
         return firstName;
     }
 
+    @FormParam("firstName")
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -58,6 +57,7 @@ public class HelloBean {
         return lastName;
     }
 
+    @FormParam("lastName")
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
